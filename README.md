@@ -1,23 +1,35 @@
-# spotify-pro
+# spoti-pro
 A Helper To Get The URL From Spotify!
 
 ## Quick Example
 
 ```javascript
+const { getSpotifyAccessToken, searchSpotify } = require("spoti-pro");
 
-const spotifyPro = require('spotify-pro');
+const clientId = "YOUR_CLIENT_ID";
+const clientSecret = "YOUR_CLIENT_SECRET";
+const q = "Shiddat";
+const limit = 5;
+const country = "IN";
 
-// Insert Your spotify ClientId and ClientSecret
-const clientId = "YOUR_SPOTIFY_CLIENT_ID";
-const clientSecret = "YOUR_SPOTIFY_CLIENT_SECRET";
-
-// Function to get the Spotify Result 
 async function run() {
-  const accessToken = await myStaticApi.getSpotifyAccessToken(clientId, clientSecret);
-  const query = "YOUR_QUERY";
-  const searchResult = await myStaticApi.searchSpotify(query, accessToken);
-  console.log(searchResult);
+  try {
+    const accessToken = await getSpotifyAccessToken(clientId, clientSecret);
+    const trackUrl = await searchSpotify(q, accessToken, limit, country);
+    console.log("Track URL:", trackUrl[0]);
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
+
 run();
 
+// No Function
+//  try {
+//     const accessToken = await getSpotifyAccessToken(clientId, clientSecret);
+//     const trackUrl = await searchSpotify(q, accessToken, limit,country);
+//     console.log("Track URL:", trackUrl[0]);
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
 ```
