@@ -50,6 +50,10 @@ class SpotiPro {
 
       const trackItems = response.data?.tracks?.items || [];
       const trackUrls = trackItems.map((item) => item?.external_urls?.spotify || null);
+      if (trackUrls.length === 0) {
+      throw new Error("No tracks found for the given query.");
+    }
+
 
       return trackUrls;
     } catch (error) {
