@@ -1,0 +1,41 @@
+{
+  "name": "spoti-pro",
+  "version": "4.0.7",
+  "description": "New Stable Version 4!!! Updated Search Spotify Data! (Spotify Search) (Spotify Find) (Spoti-Pro) ",
+  "main": "spotify.js",
+  "scripts": {
+    "start": "node spotify.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TEZZ444/spoti-pro.git"
+  },
+  "keywords": [
+    "Spotify-search",
+    "spotify",
+    "spotify-find",
+    "spoti-pro",
+    "spoti",
+    "pro",
+    "url from spotify",
+    "spotify url",
+    "spotify helper",
+    "spotify search",
+    "spotify find",
+    "spotify search data",
+    "spotify find data",
+    "jio saavan",
+    "amazon music"
+  ],
+  "author": "Tejas Shettigar",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TEZZ444/spoti-pro/issues"
+  },
+  "homepage": "https://github.com/TEZZ444/spoti-pro#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "node-cache": "^5.1.2"
+  }
+}
